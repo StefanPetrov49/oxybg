@@ -11,8 +11,7 @@ export default function Footer() {
         <Row className="align-items-center">
           {/* Left Section - Logo */}
           <Col md={4} className="text-center text-md-start mb-3 mb-md-0">
-            <Image src="/logo.png" alt="Company Logo" width={150} height={100} />
-            <p className="text-muted small">Intelligent Medical Systems</p>
+            <Image src="/logo.png" alt="Company Logo" width={180} height={90} />
           </Col>
 
           {/* Middle Section - Sitemap */}
