@@ -19,6 +19,15 @@
   gap: 20px;
 }
 
+.navbar-nav .nav-link {
+  text-decoration: none !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  text-decoration: none !important;
+}
+
 .nav-link {
   font-size: 14px;
   color: #333;
