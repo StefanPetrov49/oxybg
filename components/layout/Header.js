@@ -35,7 +35,7 @@ export default function Header() {
           <Nav.Link as={Link} href="/pricing" className="nav-link">
             Цени
           </Nav.Link>
-          <Nav.Link as={Link} href="/contact" className="nav-link">
+          <Nav.Link as={Link} href="/contacts" className="nav-link">
             Контакти
           </Nav.Link>
         </Nav>
