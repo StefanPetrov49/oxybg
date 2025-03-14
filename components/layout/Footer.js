@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Nav, NavDropdown } from "react-bootstrap";
+import Link from "next/link";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
@@ -8,35 +9,41 @@ export default function Footer() {
   return (
     <footer className="bg-light py-4">
       <Container>
-        <Row className="align-items-center">
-          {/* Left Section - Logo */}
-          <Col md={4} className="text-center text-md-start mb-3 mb-md-0">
+        {/* Top Section: Single Row */}
+        <Row className="align-items-center py-3">
+          {/* Logo section — smaller width */}
+          <Col md={2} className="text-center text-md-start mb-3 mb-md-0">
             <Image src="/logo.png" alt="Company Logo" width={180} height={90} />
           </Col>
 
-          {/* Middle Section - Sitemap */}
-          <Col md={4} className="text-center mb-3 mb-md-0">
-            <h6 className="fw-bold">Sitemap</h6>
-            <ul className="list-unstyled">
-              <li><a href="/reoxy" className="text-decoration-none text-muted">REOXY</a></li>
-              <li><a href="/technology" className="text-decoration-none text-muted">TECHNOLOGY</a></li>
-              <li><a href="/ihht" className="text-decoration-none text-muted">IHHT</a></li>
-              <li><a href="/support" className="text-decoration-none text-muted">SUPPORT</a></li>
-              <li><a href="/about-us" className="text-decoration-none text-muted">ABOUT US</a></li>
-            </ul>
+          {/* Navigation section — larger width */}
+          <Col md={8} className="mb-3 mb-md-0 d-flex justify-content-center">
+            <Nav className="flex-wrap flex-md-nowrap justify-content-center w-100 gap-4">
+              <Nav.Link as={Link} href="/general-description" className="text-primary fw-semibold">
+                ReOxy®
+              </Nav.Link>
+              <Nav.Link as={Link} href="/technology">ТЕХНОЛОГИИ</Nav.Link>
+
+              <NavDropdown title="IHHT" id="ihht-dropdown" menuVariant="light">
+                <NavDropdown.Item as={Link} href="/o2-homeostasis">O2 Хомеостаза</NavDropdown.Item>
+                <NavDropdown.Item as={Link} href="/physiological-effects">Физиологични ефекти</NavDropdown.Item>
+              </NavDropdown>
+
+              <Nav.Link as={Link} href="/pricing">ЦЕНИ</Nav.Link>
+              <Nav.Link as={Link} href="/contacts">КОНТАКТИ</Nav.Link>
+            </Nav>
           </Col>
 
-          {/* Right Section - Company Info */}
-          <Col md={4} className="text-center text-md-end">
-            <h6 className="fw-bold">Company Info</h6>
-            <p className="text-muted small">
-              <strong>Oxy BG</strong><br />
-              Sofia, Bulgaria<br />
-            </p>
+          {/* Company Info section — smaller width */}
+          <Col md={2} className="text-center text-md-end">
+            <div className="fw-bold">Company Info</div>
+            <div>Oxy BG</div>
+            <div className="text-muted small">Sofia, Bulgaria</div>
           </Col>
         </Row>
 
-        {/* Bottom Section */}
+
+        {/* Bottom Row: Copyright */}
         <hr />
         <Row className="align-items-center">
           <Col md={6} className="text-center text-md-start text-muted small">

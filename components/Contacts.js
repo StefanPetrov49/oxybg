@@ -31,7 +31,7 @@ export default function Contacts() {
       {/* Contact Info Cards */}
       <Container>
         <Row className="g-4">
-          <Col md={4}>
+          <Col md={3}>
             <Card className="border-0 shadow-sm text-center h-100">
               <Card.Body>
                 <FontAwesomeIcon icon={faEnvelope} size="2x" className="mb-3 text-primary" />
@@ -48,11 +48,23 @@ export default function Contacts() {
             </Card>
           </Col>
 
-          <Col md={4}>
+          <Col md={3}>
             <Card className="border-0 shadow-sm text-center h-100">
               <Card.Body>
                 <FontAwesomeIcon icon={faPhone} size="2x" className="mb-3 text-primary" />
-                <Card.Title className="fw-semibold">Телефон</Card.Title>
+                <Card.Title className="fw-semibold">Телефон за запазване на час</Card.Title>
+                  <Card.Text>
+                    <a href="tel:+359 89 792 6910" className="text-decoration-none text-muted">+359 89 792 6910</a>
+                  </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={3}>
+            <Card className="border-0 shadow-sm text-center h-100">
+              <Card.Body>
+                <FontAwesomeIcon icon={faPhone} size="2x" className="mb-3 text-primary" />
+                <Card.Title className="fw-semibold">Телефон за информация през WhatsApp</Card.Title>
                 <Card.Text>
                   <a
                     className="text-muted text-decoration-none"
@@ -67,7 +79,7 @@ export default function Contacts() {
             </Card>
           </Col>
 
-          <Col md={4}>
+          <Col md={3}>
             <Card className="border-0 shadow-sm text-center h-100">
               <Card.Body>
                 <FontAwesomeIcon icon={faLocationDot} size="2x" className="mb-3 text-primary" />
