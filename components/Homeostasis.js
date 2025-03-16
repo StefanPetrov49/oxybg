@@ -1,48 +1,82 @@
 import Image from "next/image";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
+
+const oxygenContributors = [
+  { image: "/nobel-1.png", name: "William Kaelin" },
+  { image: "/nobel-2.png", name: "Gregg Semenza" },
+  { image: "/nobel-3.png", name: "Peter Ratcliffe" },
+];
+
 export default function Homeostasis() {
-    return (
-        <section className="reoxy-section">
-            {/* Title Section */}
-            <div className="text-center py-4 bg-primary text-white">
-                <h2>Науката </h2>
-            </div>
+  return (
+    <section className="reoxy-section">
+      {/* Title */}
+      <div className="text-center py-4 bg-primary text-white">
+        <h2>Наука</h2>
+      </div>
 
-            {/* Description */}
-            <Container className="text-center my-4">
-                <p className="fs-5">
-                    <strong>Кислородът</strong> е най-важният елемент за живота и без кислород хората могат да оцелеят само няколко минути. Неблагоприятните последици от хипоксията са добре известни, така че е изненадващо за мнозина да чуят,
-                    че контролираното излагане на кислороден дефицит (или хипоксия), ако е в рамките на адаптивния обхват на човек, може действително да насърчи дълголетието,
-                    да подобри физическото представяне и дори да помогне за създаване на условия, които подпомагат изцелението при определени заболявания (Serebrovskaya 2002, Verges, Chacaroun et al. 2015).
-                    Трябва да има баланс между търсенето и доставянето на кислород, за да се поддържа хомеостазата в тялото.
-                </p>
-            </Container>
+      {/* Description Block */}
+      <Container className="text-center my-4">
+        <p className="fs-5">
+          <strong>Кислородът</strong> е най-важният елемент за живота и без кислород хората могат да оцелеят само няколко минути.
+          Неблагоприятните последици от хипоксията са добре известни, така че е изненадващо за мнозина да чуят,
+          че контролираното излагане на кислороден дефицит (или хипоксия), ако е в рамките на адаптивния обхват на човек, може действително да насърчи дълголетието,
+          да подобри физическото представяне и дори да помогне за създаване на условия, които подпомагат изцелението при определени заболявания
+          (Serebrovskaya 2002, Verges, Chacaroun et al. 2015).
+          Трябва да има баланс между търсенето и доставянето на кислород, за да се поддържа хомеостазата в тялото.
+        </p>
+      </Container>
 
+      {/* Subtitle */}
+      <div className="text-center py-4 bg-primary text-white">
+        <h2>Декодиране разбирането за кислород</h2>
+      </div>
 
-            <div className="text-center py-4 bg-primary text-white">
-                <h2>Декодиране разбирането за кислород </h2>
-            </div>
+      {/* Main Section */}
+      <Container className="my-5">
+        <Row className="align-items-stretch">
+          {/* Text Column - 2/3 width */}
+          <Col lg={8} md={7}>
+            <Card className="border-0 p-4 h-100" style={{ boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)" }}>
+              <Card.Body>
+                <Card.Text className="fs-5">
+                  Интервалната хипоксична-хипероксическа терапия (ИХХТ) е естествен метод за обновяване и увеличаване на броя на здравите митохондрии
+                  и възстановяване на производството на енергия в клетката (повече от 90% от АТФ се произвежда в митохондриите).
+                  ИХХТ стимулира вътреклетъчната митофагия на увредените митохондрии, което води до системно подобряване на качеството на mtDNA (митохондриална ДНК)
+                  чрез селективно елиминиране на неговите копия, които са най-увредени от оксидативния стрес, но парадоксално се размножават по-бързо от техните неувредени предшественици.
+                  <br /><br />
+                  • През 2019 г. ефективността на тази техника беше потвърдена от учените Уилям Келин, Грег Семенза и Питър Ратклиф,
+                  които получават Нобелова награда за физиология и медицина „за откритията им за начините,
+                  по които клетките усещат и се адаптират към наличието на кислород“.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
 
-            <Container className="text-center my-4">
-                <p className="fs-5">
-                    Нобеловата награда за физиология и медицина за 2019 г. беше присъдена на трима учени лекари, д-р. Уилям Г. Каелин, младши, Питър Ратклиф и Грег Семенза, за тяхната новаторска работа,
-                    разкриваща как клетките усещат и се адаптират към наличността на кислород. Кислородът е жизненоважен за всички живи организми. В хода на еволюцията бозайниците са развили способността
-                    да се адаптират към промените в концентрацията на кислород на земята. До преди около тридесет години все още не беше ясно как бозайниците могат  да се адаптират към промените в наличността на кислород.
-                </p>
-            </Container>
-
-            {/* Machine Image with Callouts */}
-            <Container fluid className="d-flex justify-content-center align-items-center p-0 mb-5">
-                <div >
-                    <Image
-                        src="/nobel.png"
-                        alt="Nobel authors"
-                        width={500}
-                        height={400}
-                        priority
-                    />
+          {/* Image Cards Column - 1/3 width */}
+          <Col lg={4} md={5}>
+            <Card className="border-0 p-4 h-100 d-flex justify-content-between" style={{ boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)" }}>
+              {oxygenContributors.map((person, index) => (
+                <div key={index} className="text-center mb-4">
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    style={{
+                      width: "120px",
+                      height: "120px",
+                      objectFit: "cover",
+                      borderRadius: "8px",
+                      boxShadow: "0 0 12px rgba(0,0,0,0.2)",
+                      marginBottom: "0.5rem"
+                    }}
+                  />
+                  <h6>{person.name}</h6>
                 </div>
-            </Container>
-        </section>
-    );
+              ))}
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
 }

@@ -33,29 +33,6 @@ export default function ReOxySection() {
             </Container>
 
 
-            {/* Easy to Operate Section */}
-            <div className="text-center py-4 bg-primary text-white mt-5">
-                <h2>Easy to Operate</h2>
-            </div>
-
-            {/* Steps Section */}
-            <Container className="my-4">
-                <Row className="text-center">
-                    <Col md={4}>
-                        <Image src="/placeholder.png" alt="Step 1" width={250} height={150} />
-                        <p>Select or enter a patient to the patient & procedure database management system.</p>
-                    </Col>
-                    <Col md={4}>
-                        <Image src="/placeholder.png" alt="Step 2" width={250} height={150} />
-                        <p>Confirm the calculated procedure parameters and alarm limits. Put on the sensor and mask.</p>
-                    </Col>
-                    <Col md={4}>
-                        <Image src="/placeholder.png" alt="Step 3" width={250} height={150} />
-                        <p>During the procedure, ReOxy monitors SpO2, PR, and O2. The procedure lasts for 30-60 min.</p>
-                    </Col>
-                </Row>
-            </Container>
-
             {/* Technical Benefits Section */}
             <div className="text-center py-4 bg-primary text-white mt-5">
                 <h2>Technical Benefits</h2>
@@ -81,19 +58,58 @@ export default function ReOxySection() {
                 </Row>
             </Container>
 
-            <div className="text-center py-4 bg-primary text-white mt-5">
-                <h2>{data.intendedUse.title}</h2>
+            <div className="text-center py-4 bg-primary text-white ">
+                <h2>Лиценз</h2>
             </div>
 
-            <Container className="my-4">
-                <Row>
-                    {data.intendedUse.content.map((paragraph, index) => (
-                        <Col key={index} md={4} className="mb-3">
-                            <p className="text-muted">{paragraph}</p>
-                        </Col>
-                    ))}
-                </Row>
-            </Container>
+            {/* Information Section */}
+            <div className="blue-section-small">
+                <div className="reoxy-info-section">
+                    <p style={{ fontSize: "20" }}>
+                        <strong>ReOxy</strong> е единственото медицинско IHHT устройство в света, което е регулаторно одобрено (TÜV Rheinland) и притежава CE маркировка за професионална употреба в здравеопазването. Апаратът - <strong>ReOxy</strong> и прилаганата процедура, са в съответствие с международния стандарт EN ISO 13485 и MDD разпоредби MDD (93/42 EEC); Критерии на EN 60601-1 (безопасност) / EN 60601-1-2 (EMC).
+                    </p>
+                </div>
+            </div>
+
+            <div className="text-center py-4 bg-primary text-white ">
+                <h2>Немедикаментозна терапия и профилактика</h2>
+            </div>
+
+            {/* Information Section */}
+            <div className="blue-section-small">
+                <div className="reoxy-info-section">
+                    <p style={{ fontSize: "20" }}>
+                         <ul>
+                            <li>Сърдечносъдови заболявания</li>
+                            <li>Мозъчносъдови заболявания</li>
+                            <li>Метаболитни заболявания</li>
+                            <li>Респираторни заболявания</li>
+                            <li>Некомпенсирана хипертония</li>
+                            <li>Бременност в първият триместър</li>
+                         </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div className="text-center py-4 bg-primary text-white">
+                <h2>Противопоказания</h2>
+            </div>
+
+            {/* Information Section */}
+            <div className="blue-section-small">
+                <div className="reoxy-info-section">
+                    <p style={{ fontSize: "20" }}>
+                         <ul>
+                            <li>Остра психоза, маниакално-депресивна психоза</li>
+                            <li>Остри инфекциозни заболявания</li>
+                            <li>Туберколоза във всякаква фаза</li>
+                            <li>Индивидуална непоносимост към недостик на кислород</li>
+                            <li>Некомпенсирана хипертония</li>
+                            <li>Бременност в първият триместър</li>
+                         </ul>
+                    </p>
+                </div>
+            </div>
         </section>
     );
 }

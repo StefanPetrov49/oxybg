@@ -2,12 +2,12 @@ import Image from "next/image";
 import { ButtonGroup, Button, Card, Row, Col, Container, Accordion } from "react-bootstrap";
 import reoxyData from "../data/reoxy-home.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHotTubPerson, faUserShield, faGears, faPersonBiking, faLungs, faHeartPulse, faBrain, faSmile, faFaceFrown, faWeightScale, faPersonRunning } from "@fortawesome/free-solid-svg-icons";
+import { faHeartCirclePlus, faUserShield, faGears, faPersonBiking, faLungs, faHeartPulse, faBrain, faSmile, faFaceFrown, faWeightScale, faPersonRunning } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
 
 // Mapping string names to actual FontAwesome icons
 const iconMap = {
-  faHotTubPerson,
+  faHeartCirclePlus,
   faUserShield,
   faGears,
   faPersonBiking
@@ -36,7 +36,7 @@ export default function ReOxyHome() {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-  
+
 
   return (
     <section className="reoxy-home">
@@ -57,7 +57,7 @@ export default function ReOxyHome() {
           {/* Right Side: Text */}
           <div className="text-container">
             <h1 className="brand-name">ReOxy®</h1>
-            <p className="subtitle">ИНТЕРМИТЕНТНА <br /> ХИПО-ХИПЕРОКСИЧНА<br /> ТЕРАПИЯ (IHHT) </p>
+            <p className="subtitle">ИНТЕРМИТЕНТНА <br /> ХИПОКСИЧНА-ХИПЕРОКСИЧНА<br /> ТЕРАПИЯ (IHHT) </p>
             <button className="more-info" >ПОВЕЧЕ ИНФОРМАЦИЯ</button>
 
           </div>
@@ -80,7 +80,7 @@ export default function ReOxyHome() {
                   icon={clinicEffectsIconMap[application.iconName]}
                   size="2x"
                   className="advantage-icon me-2"
-                  color="#2a5db0"
+                  color="#007bff"
                 /> {" "}
                 {application.title}
               </Button>
@@ -89,12 +89,51 @@ export default function ReOxyHome() {
         </div>
 
 
-        {/* Information Section */}
-        <div className="reoxy-info-section">
-          <p>
-            <strong>ReOxy</strong> е единственото медицинско IHHT устройство в света, което е регулаторно одобрено (TÜV Rheinland) и притежава CE маркировка за професионална употреба в здравеопазването. Апаратът - <strong>ReOxy</strong> и прилаганата процедура, са в съответствие с международния стандарт EN ISO 13485 и MDD разпоредби MDD (93/42 EEC); Критерии на EN 60601-1 (безопасност) / EN 60601-1-2 (EMC).
-          </p>
-        </div>
+        {/* Two Equal Cards Section - Text Left, Image Right */}
+        <Container className="my-5">
+          <Row className="g-4 align-items-stretch">
+            {/* Text Card */}
+            <Col xs={12} lg={6} className="d-flex">
+              <div className="glass-card w-100 d-flex flex-column justify-content-center">
+                <p className="info-text-card mb-0">
+                  <strong>ReOxy</strong> е революционно устройство за респираторна терапия.
+                  Този процес предизвиква състояние на "относителен дистрес" в тялото,
+                  задействайки секрецията на хормоните на стреса, които стимулират
+                  производството на стволови клетки. След това тези стволови клетки
+                  изграждат нови кръвоносни съдове, подобрявайки окисляването на тъканите,
+                  метаболизма и функциите на органите.
+                  <br /><br />
+                  Устройството, разработено в Германия, е изследвано повече от десетилетие,
+                  преди да бъде предоставено на обществеността. Над 1000 научни статии
+                  свидетелстват за ефективността на терапията като безопасно и ефективно
+                  средство за регулиране на метаболизма и иницииране на физиологични процеси,
+                  които подобряват функциите на тялото и забавят стареенето.
+                </p>
+              </div>
+            </Col>
+
+            {/* Image Card */}
+            <Col xs={12} lg={6} className="d-flex">
+              <div className="glass-card w-100 d-flex align-items-center justify-content-center">
+                <Image
+                  src="/machine.jpg"
+                  alt="ReOxy Device"
+                  width={500}
+                  height={350}
+                  className="img-fluid w-100 rounded-4"
+                  style={{
+                    objectFit: "contain",
+                    maxHeight: "400px",
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: "20px"
+                  }}
+                />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+
 
         {/* Advantages Section */}
         <Container className="advantages-section text-center">
@@ -104,7 +143,7 @@ export default function ReOxyHome() {
               <Col key={index} md={6} lg={3} className="d-flex">
                 <Card className="advantage-card mb-4 text-center">
                   <div className="icon-container">
-                    <FontAwesomeIcon icon={iconMap[advantage.iconName]} size="3x" className="advantage-icon" color="#2a5db0"/>
+                    <FontAwesomeIcon icon={iconMap[advantage.iconName]} size="3x" className="advantage-icon" color="#007bff" />
                   </div>
                   <Card.Body>
                     <Card.Title>{advantage.title}</Card.Title>
@@ -117,7 +156,7 @@ export default function ReOxyHome() {
         </Container>
 
         {/* Application Section */}
-        <Container className="application-section mt-5">
+        <Container className="application-section mt-5 mb-5">
           <h2 className="section-title">  КЛИНИЧНИ ЕФЕКТИ </h2>
           <Accordion activeKey={activeKey} onSelect={(e) => setActiveKey(e)}>
             {reoxyData.applications.map((application, index) => (
@@ -132,7 +171,7 @@ export default function ReOxyHome() {
                     icon={clinicEffectsIconMap[application.iconName]}
                     size="2x"
                     className="advantage-icon me-2"
-                    color="#2a5db0"
+                    color="#007bff"
                   />
                   {application.title}
                 </Accordion.Header>
