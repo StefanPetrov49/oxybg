@@ -10,13 +10,44 @@ const oxygenContributors = [
 export default function Homeostasis() {
   return (
     <section className="reoxy-section">
-      {/* Title */}
-      <div className="text-center py-4 bg-primary text-white">
-        <h2>Наука</h2>
+      {/* Title Section with blurred image background and overlay text */}
+      <div className="mb-5" style={{ position: "relative", width: "100%", height: "320px", overflow: "hidden" }}>
+        <Image
+          src="/knowledge.jpg"
+          alt="SRT background"
+          layout="fill"
+          objectFit="cover"
+          style={{
+            filter: "blur(2px)",
+            zIndex: 1,
+            position: "absolute",
+            top: 0,
+            left: 0,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+            zIndex: 2,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        >
+          <h2 style={{ color: "#fff", fontSize: "2rem", zIndex: 3 }}>
+            Наука
+          </h2>
+        </div>
       </div>
 
       {/* Description Block */}
-      <Container className="text-center my-4">
+      <Container className="text-center my-4 px-5 mb-5">
         <p className="fs-5">
           <strong>Кислородът</strong> е най-важният елемент за живота и без кислород хората могат да оцелеят само няколко минути.
           Неблагоприятните последици от хипоксията са добре известни, така че е изненадващо за мнозина да чуят,
@@ -28,8 +59,39 @@ export default function Homeostasis() {
       </Container>
 
       {/* Subtitle */}
-      <div className="text-center py-4 bg-primary text-white">
-        <h2>Декодиране разбирането за кислород</h2>
+      <div className="mb-5" style={{ position: "relative", width: "100%", height: "320px", overflow: "hidden" }}>
+        <Image
+          src="/mountain.png"
+          alt="SRT background"
+          layout="fill"
+          objectFit="cover"
+          style={{
+            filter: "blur(0px)",
+            zIndex: 1,
+            position: "absolute",
+            top: 0,
+            left: 0,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+            zIndex: 2,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        >
+          <h2 style={{ color: "#fff", fontSize: "2rem", zIndex: 3 }}>
+            Декодиране разбирането за кислород
+          </h2>
+        </div>
       </div>
 
       {/* Main Section */}
