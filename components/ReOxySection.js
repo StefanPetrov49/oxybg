@@ -44,7 +44,7 @@ export default function ReOxySection() {
             {/* Description */}
             <Container className="text-center my-4">
                 <p className="fs-5">
-                    <strong>REOXY®</strong> е нов медицински апарат за дихателна терапия, който лекува пациента с индивидуално дозирани нива на газови смеси с намалено
+                    <strong>REOXY®</strong> е нов апарат за дихателна терапия, който лекува пациента с индивидуално дозирани нива на газови смеси с намалено
                     съдържание на кислород (хипоксични) през цялата процедура.
                 </p>
             </Container>
@@ -138,7 +138,7 @@ export default function ReOxySection() {
                         <Card className="h-100  border-0 hover-shadow" style={{ transition: "transform 0.3s ease, box-shadow 0.3s ease" }}>
                             <Card.Body className="d-flex flex-column justify-content-center">
                                 <Card.Text style={{ fontSize: "1.05rem" }}>
-                                    <strong>ReOxy</strong> е единственото медицинско IHHT устройство в света, което е регулаторно одобрено (TÜV Rheinland) и
+                                    <strong>ReOxy</strong> е единственото IHHT устройство в света, което е регулаторно одобрено (TÜV Rheinland) и
                                     притежава CE маркировка за професионална употреба в здравеопазването. Апаратът - <strong>ReOxy</strong> и прилаганата процедура,
                                     са в съответствие с международния стандарт EN ISO 13485 и MDD разпоредби MDD (93/42 EEC);
                                     Критерии на EN 60601-1 (безопасност) / EN 60601-1-2 (EMC).
