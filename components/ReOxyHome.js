@@ -88,7 +88,7 @@ export default function ReOxyHome() {
       </div>
 
 
-      {/* Two Equal Cards Section - Text Left, Image Right */}
+      {/* Two Cards Section - Text Left, Image Right */}
       <Container className="my-5 white-section">
         <Row className="g-4 align-items-stretch">
           {/* Text Card */}
@@ -115,11 +115,11 @@ export default function ReOxyHome() {
           <Col xs={12} lg={6} className="d-flex">
             <div className="glass-card w-100 d-flex align-items-center justify-content-center">
               <Image
-                src="/machine.jpg"
+                src="/rehabilitation.jpeg"
                 alt="ReOxy Device"
                 width={500}
                 height={350}
-                className="img-fluid w-100 rounded-4"
+                className="img-fluid w-100 rounded-5"
                 style={{
                   objectFit: "contain",
                   maxHeight: "400px",
@@ -192,7 +192,7 @@ export default function ReOxyHome() {
           </div>
         </div>
         <Container>
-          <Accordion className="side-padding-section" activeKey={activeKey} onSelect={(e) => setActiveKey(e)}>
+          <Accordion activeKey={activeKey} onSelect={(e) => setActiveKey(e)}>
             {reoxyData.applications.map((application, index) => (
               <Accordion.Item
                 key={application.id}
