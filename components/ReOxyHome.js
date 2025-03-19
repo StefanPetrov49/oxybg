@@ -58,7 +58,7 @@ export default function ReOxyHome() {
           <div className="text-container">
             <h1 className="brand-name">ReOxy®</h1>
             <p className="subtitle">ИНТЕРМИТЕНТНА <br /> ХИПОКСИЧНА-ХИПЕРОКСИЧНА<br /> ТЕРАПИЯ (IHHT) </p>
-            <button className="more-info" >ПОВЕЧЕ ИНФОРМАЦИЯ</button>
+            <Button href="/general-description" className="more-info" >ПОВЕЧЕ ИНФОРМАЦИЯ</Button>
 
           </div>
         </div>
