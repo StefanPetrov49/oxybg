@@ -1,9 +1,13 @@
+import Head from "next/head";
 import Image from "next/image";
 import { Container, Row, Col, Table } from "react-bootstrap";
 
 export default function Pricing() {
   return (
     <section className="reoxy-section">
+      <Head>
+        <title>Цени</title>
+      </Head>
       {/* Title Section */}
       <div className="text-center py-4 bg-primary text-white">
         <h2>Цени</h2>

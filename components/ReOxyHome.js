@@ -4,6 +4,7 @@ import reoxyData from "../data/reoxy-home.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeartCirclePlus, faUserShield, faGears, faPersonBiking, faLungs, faHeartPulse, faBrain, faSmile, faFaceFrown, faWeightScale, faPersonRunning } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
+import Head from "next/head";
 
 // Mapping string names to actual FontAwesome icons
 const iconMap = {
@@ -40,6 +41,9 @@ export default function ReOxyHome() {
 
   return (
     <>
+      <Head>
+        <title>OxyBg</title>
+      </Head>
       {/* Blue Section: Image on Left, Text on Right */}
       <div className="blue-section">
         <div className="content-container">

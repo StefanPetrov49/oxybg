@@ -1,9 +1,13 @@
+import Head from "next/head";
 import Image from "next/image";
 import { Card, Col, Container, Row } from "react-bootstrap";
 
 export default function Technology() {
     return (
         <section className="reoxy-section">
+            <Head>
+                <title>Технологии</title>
+            </Head>
             {/* Title Section with blurred image background and overlay text */}
             <div className="mb-5" style={{ position: "relative", width: "100%", height: "400px", overflow: "hidden" }}>
                 <Image

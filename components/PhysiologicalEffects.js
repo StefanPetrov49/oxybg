@@ -1,10 +1,14 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
 import data from "../data/ihht.json";
+import Head from "next/head";
 
 export default function PhysiologicalEffects() {
   return (
     <section className="reoxy-section">
+      <Head>
+        <title>Физиологични ефекти</title>
+      </Head>
       {/* Short-term adaptation */}
       <div className="text-center py-4 bg-primary text-white">
         <h2>Краткосрочна адаптация към излагане на хипоксия</h2>

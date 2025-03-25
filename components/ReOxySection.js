@@ -1,10 +1,14 @@
 import Image from "next/image";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import data from "../data/reoxy-home.json";
+import Head from "next/head";
 
 export default function ReOxySection() {
     return (
         <section className="reoxy-section">
+            <Head>
+                <title>Описание на ReOxy</title>
+            </Head>
             {/* Title Section with blurred image background and overlay text */}
             <div className="mb-5" style={{ position: "relative", width: "100%", height: "320px", overflow: "hidden" }}>
                 <Image

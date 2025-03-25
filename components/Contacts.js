@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import { faEnvelope, faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import Head from "next/head";
 
 export default function Contacts() {
   return (
     <section className="py-5" style={{ backgroundColor: "#e3f2fd" }}>
+      <Head>
+        <title>Контакти</title>
+      </Head>
       {/* Header + Image Layout */}
       <Container className="mb-5">
         <Row className="align-items-center">
@@ -39,9 +43,9 @@ export default function Contacts() {
                 <Card.Text>
                   <a
                     className="text-muted text-decoration-none"
-                    href="mailto:veno.naumov@gmail.com"
+                    href="mailto:contact@oxybg.com"
                   >
-                    veno.naumov@gmail.com
+                    contact@oxybg.com
                   </a>
                 </Card.Text>
               </Card.Body>
@@ -53,9 +57,9 @@ export default function Contacts() {
               <Card.Body>
                 <FontAwesomeIcon icon={faPhone} size="2x" className="mb-3 text-primary" />
                 <Card.Title className="fw-semibold">Телефон за запазване на час</Card.Title>
-                  <Card.Text>
-                    <a href="tel:+359 89 792 6910" className="text-decoration-none text-muted">+359 89 792 6910</a>
-                  </Card.Text>
+                <Card.Text>
+                  <a href="tel:+359 89 792 6910" className="text-decoration-none text-muted">+359 89 792 6910</a>
+                </Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -63,7 +67,15 @@ export default function Contacts() {
           <Col md={3}>
             <Card className="border-0 shadow-sm text-center h-100">
               <Card.Body>
-                <FontAwesomeIcon icon={faPhone} size="2x" className="mb-3 text-primary" />
+                <Image
+                  src="/whatsapp.png" // Your custom WhatsApp image path
+                  alt="WhatsApp"
+                  style={{
+                    width: "40px", // Same size as FontAwesome icons
+                    height: "40px", // Same size as FontAwesome icons
+                    marginBottom: "1rem",
+                  }}
+                />
                 <Card.Title className="fw-semibold">Телефон за информация през WhatsApp</Card.Title>
                 <Card.Text>
                   <a

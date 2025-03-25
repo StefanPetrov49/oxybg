@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
@@ -10,6 +11,9 @@ const oxygenContributors = [
 export default function Homeostasis() {
   return (
     <section className="reoxy-section">
+      <Head>
+        <title>О2 Хомеостаза</title>
+      </Head>
       {/* Title Section with blurred image background and overlay text */}
       <div className="mb-5" style={{ position: "relative", width: "100%", height: "320px", overflow: "hidden" }}>
         <Image
