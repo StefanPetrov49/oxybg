@@ -32,10 +32,9 @@ export default function Contacts() {
         </Row>
       </Container>
 
-      {/* Contact Info Cards */}
       <Container>
         <Row className="g-4">
-          <Col md={3}>
+          <Col md={4}>
             <Card className="border-0 shadow-sm text-center h-100">
               <Card.Body>
                 <FontAwesomeIcon icon={faEnvelope} size="2x" className="mb-3 text-primary" />
@@ -52,27 +51,27 @@ export default function Contacts() {
             </Card>
           </Col>
 
-          <Col md={3}>
+          <Col md={4}>
             <Card className="border-0 shadow-sm text-center h-100">
               <Card.Body>
                 <FontAwesomeIcon icon={faPhone} size="2x" className="mb-3 text-primary" />
                 <Card.Title className="fw-semibold">Телефон за запазване на час</Card.Title>
                 <Card.Text>
-                  <a href="tel:+359 89 792 6910" className="text-decoration-none text-muted">+359 89 792 6910</a>
+                  <a href="tel:+359876307729" className="text-decoration-none text-muted">+359 87 630 7729</a>
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
 
-          <Col md={3}>
+          <Col md={4}>
             <Card className="border-0 shadow-sm text-center h-100">
               <Card.Body>
                 <Image
-                  src="/whatsapp.png" // Your custom WhatsApp image path
+                  src="/whatsapp.png"
                   alt="WhatsApp"
                   style={{
-                    width: "40px", // Same size as FontAwesome icons
-                    height: "40px", // Same size as FontAwesome icons
+                    width: "40px",
+                    height: "40px",
                     marginBottom: "1rem",
                   }}
                 />
@@ -91,7 +90,7 @@ export default function Contacts() {
             </Card>
           </Col>
 
-          <Col md={3}>
+          <Col md={4}>
             <Card className="border-0 shadow-sm text-center h-100">
               <Card.Body>
                 <FontAwesomeIcon icon={faLocationDot} size="2x" className="mb-3 text-primary" />
@@ -100,8 +99,63 @@ export default function Contacts() {
               </Card.Body>
             </Card>
           </Col>
+
+          <Col md={4}>
+            <Card className="border-0 shadow-sm text-center h-100">
+              <Card.Body>
+                <Image
+                  src="/facebook.png"
+                  alt="Facebook"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    marginBottom: "1rem",
+                  }}
+                />
+                <Card.Title className="fw-semibold">Facebook</Card.Title>
+                <Card.Text>
+                  <a
+                    className="text-muted text-decoration-none"
+                    href="https://www.facebook.com/profile.php?id=61576186333363"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    facebook.com/reoxy
+                  </a>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={4}>
+            <Card className="border-0 shadow-sm text-center h-100">
+              <Card.Body>
+                <Image
+                  src="/instagram.png"
+                  alt="Instagram"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    marginBottom: "1rem",
+                  }}
+                />
+                <Card.Title className="fw-semibold">Instagram</Card.Title>
+                <Card.Text>
+                  <a
+                    className="text-muted text-decoration-none"
+                    href="https://www.instagram.com/reoxybg/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    instagram.com/reoxybg
+                  </a>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
         </Row>
       </Container>
+
     </section>
   );
 }

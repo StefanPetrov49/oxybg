@@ -119,14 +119,14 @@ export default function ReOxyHome() {
           <Col xs={12} lg={6} className="d-flex">
             <div className="glass-card w-100 d-flex align-items-center justify-content-center">
               <Image
-                src="/rehabilitation.jpeg"
+                src="/model-2.jpg"
                 alt="ReOxy Device"
                 width={500}
                 height={350}
                 className="img-fluid w-100 rounded-5"
                 style={{
                   objectFit: "contain",
-                  maxHeight: "400px",
+                  maxHeight: "600px",
                   width: "100%",
                   height: "auto",
                   borderRadius: "20px"

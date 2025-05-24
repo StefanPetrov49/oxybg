@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container, Row, Col, Nav, NavDropdown } from "react-bootstrap";
 import Link from "next/link";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -50,8 +50,8 @@ export default function Footer() {
             © {currentYear} Oxy BG
           </Col>
           <Col md={6} className="text-center text-md-end">
-            <a href="#" className="text-muted me-3">
-              <FaLinkedinIn />
+            <a href="https://www.instagram.com/reoxybg/" className="text-muted me-3">
+              <FaInstagram />
             </a>
             <a href="#" className="text-muted">
               <FaFacebookF />

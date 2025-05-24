@@ -49,12 +49,12 @@ export default function ReOxySection() {
             <Container className="text-center my-4">
                 <p className="fs-5">
                     <strong>REOXY®</strong> е нов апарат за дихателна терапия, който експозира пациента с индивидуално дозирани нива на газови смеси с намалено съдържание на кислород
-                     (хипоксични) последвани от такива с увеличено съдържание на кислород (хипероксични) през цялата процедура.
+                    (хипоксични) последвани от такива с увеличено съдържание на кислород (хипероксични) през цялата процедура.
                 </p>
             </Container>
 
             {/* Machine Image with Callouts */}
-            <Container fluid className="d-flex justify-content-center align-items-center p-0">
+            <Container fluid className="d-flex justify-content-center align-items-center p-0" >
                 <div className="reoxy-image-wrapper">
                     <Image
                         src="/reoxy-machine.png"
@@ -69,7 +69,7 @@ export default function ReOxySection() {
 
             {/* Technical Benefits Section */}
             <div style={{ backgroundColor: "#e3f2fd", padding: "60px 0" }}>
-                <Container className="text-center">
+                <div className="text-center" style={{ paddingLeft: "2rem", paddingRight: "2rem" }}>
                     <h3 className="mb-4 fw-bold">Технически предимства на ReOxy</h3>
                     <Row className="g-4">
                         {data.technicalBenefits.map((benefit, index) => (
@@ -95,11 +95,11 @@ export default function ReOxySection() {
                             </Col>
                         ))}
                     </Row>
-                </Container>
+                </div>
             </div>
 
             {/* Title Section with blurred image background and overlay text */}
-            <div className="mb-5" style={{ position: "relative", width: "100%", height: "320px", overflow: "hidden" }}>
+            <div className="" style={{ position: "relative", width: "100%", height: "320px", overflow: "hidden" }}>
                 <Image
                     src="/medical-license.jpg"
                     alt="SRT background"
@@ -135,7 +135,7 @@ export default function ReOxySection() {
             </div>
 
             {/* License Information Section - Two Cards Side by Side */}
-            <Container className="my-5">
+            <Container className="my-5" >
                 <Row className="g-4 align-items-stretch">
                     {/* Text Card */}
                     <Col xs={12} md={9}>
@@ -166,46 +166,65 @@ export default function ReOxySection() {
                 </Row>
             </Container>
 
+            <div className="my-5 white-section" style={{ backgroundColor: "#e3f2fd", paddingTop: "3rem", paddingBottom: "3rem" }}>
+                <Container>
+                    <Row className="g-4 align-items-stretch ">
+                        {/* Therapy Card */}
+                        <Col xs={12} md={6} className="d-flex">
+                            <div className="reoxy-card reoxy-card-therapy uniform-card w-100 h-100">
+                                <h2 className="reoxy-heading">Немедикаментозна терапия и профилактика</h2>
+                                <ul className="reoxy-list">
+                                    <li>- Сърдечносъдови заболявания</li>
+                                    <li>- Мозъчносъдови заболявания</li>
+                                    <li>- Метаболитни заболявания</li>
+                                    <li>- Респираторни заболявания</li>
+                                    <li>- Некомпенсирана хипертония</li>
+                                </ul>
+                            </div>
+                        </Col>
 
+                        {/* Lungs Image */}
+                        <Col xs={12} md={6} className="d-flex">
+                            <div className="glass-card uniform-card w-100 h-100">
+                                <Image
+                                    src="/lungs.png"
+                                    alt="Lungs"
+                                    className="uniform-image"
+                                    width={300}
+                                    height={300}
+                                />
+                            </div>
+                        </Col>
 
+                        {/* Contraindications Image */}
+                        <Col xs={12} md={6} className="d-flex">
+                            <div className="glass-card uniform-card w-100 h-100">
+                                <Image
+                                    src="/exclamation.png"
+                                    alt="No Medication"
+                                    className="uniform-image"
+                                    width={300}
+                                    height={300}
+                                />
+                            </div>
+                        </Col>
 
-            <div className="text-center py-4 bg-primary text-white ">
-                <h2>Немедикаментозна терапия и профилактика</h2>
-            </div>
-
-            {/* Information Section */}
-            <div className="blue-section-small">
-                <div className="reoxy-info-section">
-                    <p style={{ fontSize: "20" }}>
-                        <ul>
-                            <li>Сърдечносъдови заболявания</li>
-                            <li>Мозъчносъдови заболявания</li>
-                            <li>Метаболитни заболявания</li>
-                            <li>Респираторни заболявания</li>
-                            <li>Некомпенсирана хипертония</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-
-            <div className="text-center py-4 bg-primary text-white">
-                <h2>Противопоказания</h2>
-            </div>
-
-            {/* Information Section */}
-            <div className="blue-section-small">
-                <div className="reoxy-info-section">
-                    <p style={{ fontSize: "20" }}>
-                        <ul>
-                            <li>Остра психоза, маниакално-депресивна психоза</li>
-                            <li>Остри инфекциозни заболявания</li>
-                            <li>Туберколоза във всякаква фаза</li>
-                            <li>Индивидуална непоносимост към недостиг на кислород</li>
-                            <li>Некомпенсирана хипертония</li>
-                            <li>Бременност в първият триместър</li>
-                        </ul>
-                    </p>
-                </div>
+                        {/* Contraindications Text */}
+                        <Col xs={12} md={6} className="d-flex">
+                            <div className="reoxy-card reoxy-card-contra uniform-card w-100 h-100">
+                                <h2 className="reoxy-heading">Противопоказания</h2>
+                                <ul className="reoxy-list reoxy-list-contra">
+                                    <li>- Остра психоза, маниакално-депресивна психоза</li>
+                                    <li>- Остри инфекциозни заболявания</li>
+                                    <li>- Туберкулоза във всякаква фаза</li>
+                                    <li>- Индивидуална непоносимост към недостиг на кислород</li>
+                                    <li>- Некомпенсирана хипертония</li>
+                                    <li>- Бременност в първия триместър</li>
+                                </ul>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </section>
     );
