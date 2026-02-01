@@ -10,8 +10,10 @@ export default function PhysiologicalEffects() {
         <title>Физиологични ефекти</title>
       </Head>
       {/* Short-term adaptation */}
-      <div className="text-center py-4 bg-primary text-white">
-        <h2>Краткосрочна адаптация към излагане на хипоксия</h2>
+      <div className="pricing-hero">
+        <Container className="text-center text-white">
+          <h1 className="fw-bold mb-2">Краткосрочна адаптация към излагане на хипоксия</h1>
+        </Container>
       </div>
 
       <Container className="my-4">
@@ -44,8 +46,10 @@ export default function PhysiologicalEffects() {
       </Container>
 
       {/* Long-term adaptation */}
-      <div className="text-center py-4 bg-primary text-white">
-        <h2>Дългосрочна адаптация към излагане на хипоксия</h2>
+      <div className="pricing-hero">
+        <Container className="text-center text-white">
+          <h1 className="fw-bold mb-">Дългосрочна адаптация към излагане на хипоксия</h1>
+        </Container>
       </div>
 
       <Container className="my-4">

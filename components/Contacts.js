@@ -95,7 +95,7 @@ export default function Contacts() {
               <Card.Body>
                 <FontAwesomeIcon icon={faLocationDot} size="2x" className="mb-3 text-primary" />
                 <Card.Title className="fw-semibold">Адрес</Card.Title>
-                <Card.Text>София Център, ул. "Добруджа" 1, 1000 София</Card.Text>
+                <Card.Text>{`София ул. „Донка Ушлинова“ 2, Сграда 2, 1756 Намира се в обекта на Physio.bg`}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
